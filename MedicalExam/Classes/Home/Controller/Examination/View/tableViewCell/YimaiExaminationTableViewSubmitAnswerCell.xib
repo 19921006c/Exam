@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="YimaiExaminationTableViewSubmitAnswerCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_bg" translatesAutoresizingMaskIntoConstraints="NO" id="s7e-St-OwP">
+                        <rect key="frame" x="0.0" y="0.5" width="320" height="43.5"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJy-Go-pLJ">
+                        <rect key="frame" x="20" y="12" width="280" height="32"/>
+                        <color key="backgroundColor" red="0.23137254901960785" green="0.78823529411764703" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="提交答案">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_bg" translatesAutoresizingMaskIntoConstraints="NO" id="3PH-2g-uy7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="kWB-Vv-QWI"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="s7e-St-OwP" secondAttribute="bottom" id="1AB-IO-hsa"/>
+                    <constraint firstItem="3PH-2g-uy7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4Qn-nv-PlB"/>
+                    <constraint firstItem="s7e-St-OwP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8bd-kK-Xqz"/>
+                    <constraint firstItem="rJy-Go-pLJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Cg7-1M-eC4"/>
+                    <constraint firstItem="rJy-Go-pLJ" firstAttribute="top" secondItem="3PH-2g-uy7" secondAttribute="bottom" id="GIQ-zd-4kg"/>
+                    <constraint firstAttribute="bottom" secondItem="rJy-Go-pLJ" secondAttribute="bottom" id="NnG-vJ-8XW"/>
+                    <constraint firstItem="s7e-St-OwP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YJo-ht-4DG"/>
+                    <constraint firstItem="rJy-Go-pLJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Yuw-vy-ljb"/>
+                    <constraint firstAttribute="trailing" secondItem="rJy-Go-pLJ" secondAttribute="trailing" constant="20" id="eKQ-AI-nxx"/>
+                    <constraint firstAttribute="trailing" secondItem="3PH-2g-uy7" secondAttribute="trailing" id="iuN-5q-nNa"/>
+                    <constraint firstItem="3PH-2g-uy7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="k6u-Ql-Tgy"/>
+                    <constraint firstAttribute="trailing" secondItem="s7e-St-OwP" secondAttribute="trailing" id="l6L-lD-INf"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Yuw-vy-ljb"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn" destination="rJy-Go-pLJ" id="0th-M3-bt2"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="home_bg" width="375" height="648"/>
+    </resources>
+</document>

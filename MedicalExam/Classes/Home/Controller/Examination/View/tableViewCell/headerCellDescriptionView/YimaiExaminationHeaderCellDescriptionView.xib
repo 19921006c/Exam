@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YimaiExaminationHeaderCellDescriptionView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKU-Y4-Ppm">
+                    <rect key="frame" x="40" y="194" width="240" height="92"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-NS-BDs">
+                            <rect key="frame" x="15" y="15" width="210" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-yJ-13R" userLabel="lineImageView">
+                            <rect key="frame" x="0.0" y="47" width="240" height="1"/>
+                            <color key="backgroundColor" red="0.77647058823529413" green="0.77254901960784317" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="SgZ-7a-M8K"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5q-ER-Cls">
+                            <rect key="frame" x="0.0" y="48" width="240" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Lzx-e0-aM6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="知道了，继续答题">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="highlighted" title="知道了，继续答题"/>
+                            <connections>
+                                <action selector="btnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="99B-DO-7bm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="g3Q-yJ-13R" firstAttribute="top" secondItem="Wsl-NS-BDs" secondAttribute="bottom" constant="15" id="BN3-F1-X97"/>
+                        <constraint firstItem="Wsl-NS-BDs" firstAttribute="leading" secondItem="BKU-Y4-Ppm" secondAttribute="leading" constant="15" id="EZp-a4-ZZ8"/>
+                        <constraint firstItem="Wsl-NS-BDs" firstAttribute="top" secondItem="BKU-Y4-Ppm" secondAttribute="top" constant="15" id="Fm6-MU-hLh"/>
+                        <constraint firstItem="z5q-ER-Cls" firstAttribute="top" secondItem="g3Q-yJ-13R" secondAttribute="bottom" id="RSe-nl-JDy"/>
+                        <constraint firstItem="g3Q-yJ-13R" firstAttribute="leading" secondItem="BKU-Y4-Ppm" secondAttribute="leading" id="Wiq-Ew-Z8L"/>
+                        <constraint firstAttribute="trailing" secondItem="g3Q-yJ-13R" secondAttribute="trailing" id="aBZ-Pc-4OD"/>
+                        <constraint firstAttribute="trailing" secondItem="Wsl-NS-BDs" secondAttribute="trailing" constant="15" id="beq-66-26y"/>
+                        <constraint firstAttribute="bottom" secondItem="z5q-ER-Cls" secondAttribute="bottom" id="lGz-PG-gHE"/>
+                        <constraint firstItem="z5q-ER-Cls" firstAttribute="leading" secondItem="BKU-Y4-Ppm" secondAttribute="leading" id="mIq-9m-Q4T"/>
+                        <constraint firstAttribute="trailing" secondItem="z5q-ER-Cls" secondAttribute="trailing" id="wad-OQ-Rgn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BKU-Y4-Ppm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="E2j-8x-hSk"/>
+                <constraint firstItem="BKU-Y4-Ppm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="FjE-yR-T94"/>
+                <constraint firstAttribute="trailing" secondItem="BKU-Y4-Ppm" secondAttribute="trailing" constant="40" id="W6h-go-c1K"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomView" destination="BKU-Y4-Ppm" id="fbG-J2-SgX"/>
+                <outlet property="label" destination="Wsl-NS-BDs" id="DTd-xo-GG7"/>
+            </connections>
+        </view>
+    </objects>
+</document>

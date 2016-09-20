@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="101" id="KGk-i7-Jjw" customClass="YimaiExaminationTableViewCommonContentCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXh-Bc-ksj" customClass="DTAttributedTextView">
+                        <rect key="frame" x="12" y="12" width="296" height="62.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </scrollView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPb-jI-cAr">
+                        <rect key="frame" x="0.0" y="99" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="c7B-sm-fr0"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_bg" translatesAutoresizingMaskIntoConstraints="NO" id="3sT-hd-fXX">
+                        <rect key="frame" x="0.0" y="87" width="320" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="Mfw-sb-hZP"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ysd-xb-X8b">
+                        <rect key="frame" x="0.0" y="86.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="sCV-ck-NAG"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="jXh-Bc-ksj" secondAttribute="trailing" constant="12" id="BkN-q0-GhA"/>
+                    <constraint firstItem="KPb-jI-cAr" firstAttribute="top" secondItem="3sT-hd-fXX" secondAttribute="bottom" id="FBx-0U-hdr"/>
+                    <constraint firstItem="jXh-Bc-ksj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="FDr-3X-xWl"/>
+                    <constraint firstAttribute="bottom" secondItem="KPb-jI-cAr" secondAttribute="bottom" id="G3v-Ed-vky"/>
+                    <constraint firstItem="Ysd-xb-X8b" firstAttribute="top" secondItem="jXh-Bc-ksj" secondAttribute="bottom" constant="12" id="O1Z-nW-TRf"/>
+                    <constraint firstAttribute="bottom" secondItem="jXh-Bc-ksj" secondAttribute="bottom" constant="12" id="Qna-ba-XMg"/>
+                    <constraint firstItem="Ysd-xb-X8b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rbg-5U-Jb8"/>
+                    <constraint firstItem="KPb-jI-cAr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RoV-LM-6U9"/>
+                    <constraint firstItem="3sT-hd-fXX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VHy-AZ-Y2F"/>
+                    <constraint firstAttribute="trailing" secondItem="Ysd-xb-X8b" secondAttribute="trailing" id="fQl-iV-Z7h"/>
+                    <constraint firstAttribute="trailing" secondItem="3sT-hd-fXX" secondAttribute="trailing" id="mMH-sm-Yja"/>
+                    <constraint firstItem="jXh-Bc-ksj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="sYa-fa-DbF"/>
+                    <constraint firstAttribute="trailing" secondItem="KPb-jI-cAr" secondAttribute="trailing" id="wiH-xw-7DM"/>
+                    <constraint firstItem="3sT-hd-fXX" firstAttribute="top" secondItem="Ysd-xb-X8b" secondAttribute="bottom" id="yLs-Dx-igV"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Qna-ba-XMg"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="answerLabelView" destination="jXh-Bc-ksj" id="3ji-6V-Lxm"/>
+            </connections>
+            <point key="canvasLocation" x="288" y="292.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="home_bg" width="375" height="648"/>
+    </resources>
+</document>

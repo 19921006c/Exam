@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yr8-MN-a2h" customClass="YimaiExaminationRightItemView">
+            <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ4-nR-r1G">
+                    <state key="normal" image="Exam_right_item_0"/>
+                    <connections>
+                        <action selector="submitBtnAction:" destination="yr8-MN-a2h" eventType="touchUpInside" id="Zq8-9p-dF2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJN-g9-OHx">
+                    <state key="normal" image="Exam_right_item_1"/>
+                    <connections>
+                        <action selector="shareBtnAction:" destination="yr8-MN-a2h" eventType="touchUpInside" id="fFY-iG-e37"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="OQ4-nR-r1G" firstAttribute="top" secondItem="yr8-MN-a2h" secondAttribute="top" id="Ez8-WM-BQh"/>
+                <constraint firstAttribute="trailing" secondItem="aJN-g9-OHx" secondAttribute="trailing" id="H7M-Mi-5zK"/>
+                <constraint firstAttribute="bottom" secondItem="OQ4-nR-r1G" secondAttribute="bottom" id="Rhs-10-BUS"/>
+                <constraint firstItem="aJN-g9-OHx" firstAttribute="width" secondItem="OQ4-nR-r1G" secondAttribute="width" id="dT8-8O-nmf"/>
+                <constraint firstItem="aJN-g9-OHx" firstAttribute="top" secondItem="yr8-MN-a2h" secondAttribute="top" id="guo-i1-JkV"/>
+                <constraint firstAttribute="bottom" secondItem="aJN-g9-OHx" secondAttribute="bottom" id="hMx-oz-orr"/>
+                <constraint firstItem="OQ4-nR-r1G" firstAttribute="leading" secondItem="yr8-MN-a2h" secondAttribute="leading" id="vbQ-q4-kCn"/>
+                <constraint firstItem="aJN-g9-OHx" firstAttribute="leading" secondItem="OQ4-nR-r1G" secondAttribute="trailing" constant="10" id="vdz-Dq-p35"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="214" y="318"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Exam_right_item_0" width="30" height="30"/>
+        <image name="Exam_right_item_1" width="30" height="30"/>
+    </resources>
+</document>

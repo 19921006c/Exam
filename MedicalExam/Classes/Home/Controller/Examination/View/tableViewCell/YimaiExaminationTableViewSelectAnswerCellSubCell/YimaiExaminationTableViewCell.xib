@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="YimaiExaminationTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Skr-GR-q0k" userLabel="iconImageView">
+                        <rect key="frame" x="33" y="10" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="aW2-1u-CCQ"/>
+                            <constraint firstAttribute="width" secondItem="Skr-GR-q0k" secondAttribute="height" multiplier="15:15" id="n6L-WA-qrQ"/>
+                        </constraints>
+                    </imageView>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXh-Bc-ksj" customClass="DTAttributedTextView">
+                        <rect key="frame" x="69" y="12" width="239" height="19.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Skr-GR-q0k" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6yf-6F-vdE"/>
+                    <constraint firstAttribute="trailing" secondItem="jXh-Bc-ksj" secondAttribute="trailing" constant="12" id="BkN-q0-GhA"/>
+                    <constraint firstAttribute="bottom" secondItem="jXh-Bc-ksj" secondAttribute="bottom" constant="12" id="Qna-ba-XMg"/>
+                    <constraint firstItem="Skr-GR-q0k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="33" id="fJN-I6-kvc"/>
+                    <constraint firstItem="jXh-Bc-ksj" firstAttribute="leading" secondItem="Skr-GR-q0k" secondAttribute="trailing" constant="12" id="gIv-cd-CAG"/>
+                    <constraint firstItem="jXh-Bc-ksj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="sYa-fa-DbF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="answerLabelView" destination="jXh-Bc-ksj" id="yxi-dj-G1Z"/>
+                <outlet property="iconImageView" destination="Skr-GR-q0k" id="DRu-oy-Skk"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

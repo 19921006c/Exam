@@ -1,0 +1,232 @@
+//
+//  DoctorPlat-Prefix.pch
+//  DoctorPlatForm
+//
+//  Created by weiyi on 15/4/15.
+//  Copyright (c) 2015年 songzm. All rights reserved.
+//
+
+#ifndef DoctorPlatForm_DoctorPlatForm_Prefix_pch
+#define DoctorPlatForm_DoctorPlatForm_Prefix_pch
+
+#define DEMO_CALL 1
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+
+#import "HeaderFiles.h"
+
+// 快速生成颜色
+#define IWCustomColor(r , g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:(a)/255.0 ]
+
+// 随机色
+#define  WYRandomColor   WYCustomColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#define kAnimationTime .3 // 动画时间
+#define kTipTime 2 // 弹框时间
+#define kerrorTime 3 // 弹框时间
+
+// 自定义Log
+// 应用程序处于调试阶段时系统会自动给我们定义一个名称叫做DEBUG的宏
+// 应用程序发布的时候, 系统会自动去除名称叫做DEBUG的宏
+#ifdef DEBUG  // 判断是否有DEBUG的宏, 如果有就编译下面一句, 如果没有就编译#else后面的一句
+#define WYLog(...)  NSLog(__VA_ARGS__)
+#else
+#define WYLog(...)
+#endif
+#define kCompressNum .1
+// 判断是否是ios7
+#define isIOS7 ([UIDevice currentDevice].systemVersion.doubleValue < 8.0)
+#define isIOS7_0 ([UIDevice currentDevice].systemVersion.doubleValue < 7.1)
+#define isIOS8 ([UIDevice currentDevice].systemVersion.doubleValue >= 8.0)
+#define isIOS9 ([UIDevice currentDevice].systemVersion.doubleValue >= 9.0)
+
+// P判断时候4英尺
+#define IPHONE_6 (375.0 == [UIScreen mainScreen].bounds.size.width)
+#define IPHONE_5_4 (320 == [UIScreen mainScreen].bounds.size.width)
+#define IPHONE_4 (480 == [UIScreen mainScreen].bounds.size.height)
+
+#define IPHONE_6_PLUS (414 == [UIScreen mainScreen].bounds.size.width)
+// 适配尺寸
+#define kFitPhone kScreenWidth / 375.0
+
+#define kString_md5 @"9ab41cc1bbef27fa4b5b7d4cbe17a75a"
+#define UserInfoPath @"userInfo.arch"
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+#define KNOTIFICATION_LOGINCHANGE @"loginStateChange"
+
+#define CHATVIEWBACKGROUNDCOLOR [UIColor colorWithRed:0.936 green:0.932 blue:0.907 alpha:1]
+#define kScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kScreenBounds [UIScreen mainScreen].bounds
+#define theApp ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define MainApp [UIApplication sharedApplication]
+#define KeyWindow       [[UIApplication sharedApplication] keyWindow]
+#define MainWindow      [[[UIApplication sharedApplication] delegate] window]
+#define USERID kUserId
+#define kNavigtaionHeight 64
+
+// 登陆返回保存路径
+#define UserInfoFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:@"userInfo.arch"]
+//退出登录后登陆界面的信息
+#define LogoutInfoFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:@"logout.arch"]
+// 个人信息保存路径
+#define PersonalInfoFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:@"personalInfo.arch"]
+// 证书照片的本地保存路径
+#define photoPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject]
+// 诊所信息保存路径
+#define ClinicInfoFilePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject] stringByAppendingPathComponent:@"clinicInfo.arch"]
+
+#define kCoursePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"course.plist"]
+
+#define kCourseniPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"courseni.plist"]
+
+
+#define kNewCoursePath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"newcourse.plist"]
+
+#define kNewCourseniPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"newcourseni.plist"]
+
+
+// 随机色
+#define  WYRandomColor   WYCustomColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define WYCustomColor(r , g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0  blue:(b)/255.0  alpha:(a)/255.0 ]
+
+
+
+//消息置顶
+#define TOPMESSAGES [NSString stringWithFormat:@"%@%@",@"TopMessages",kUserId]
+//声音的
+#define USERSOUNDSET [NSString stringWithFormat:@"%@%@",@"Sound",kUserId]
+//震动
+#define USERVIBRATIONSET [NSString stringWithFormat:@"%@%@",@"Vibration",kUserId]
+//问题广场
+#define USERQUESTIONAREASET [NSString stringWithFormat:@"%@%@",@"questionAreaSet",kUserId]
+//初始化医生
+#define InitDoctorGroup [NSString stringWithFormat:@"%@%@",@"isInitDoctorGroup",kUserId]
+//推送注册id
+#define JPushRegistrationID @"JPushRegistrationID"
+
+
+//http 添加头
+#define AFHttpHeadKey   @"Yimai-Request"
+#define AFUDIDKey       @"Yimai-Code"
+
+//RSA公钥
+#define RSAPUBLICKEY @"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC4QVQ+n54HCCFMHuGikTD0GMDxHgB8utMoszl955dcl6ax5YOMTa1z4Ib815/PGbRCBDv0vsG9jeGKY1pe9Qj3KHxJKiicJr3KV1R1vmzv1JdcRNTFVb6I9/awbJTNnTOvl8JZNm8QomdHlrQk8u3vP/Xdj217Mk4I4mTGDK1WFwIDAQAB\n-----END PUBLIC KEY-----"
+
+#endif
+
+//非空的字符串 避免输出null
+#define kUnNilStr(str) ((str && ![str isEqual:[NSNull null]])?str:@"")
+//非空的字符串 输出空格
+#define kUnNilStrSpace(str) ((str && ![str isEqual:[NSNull null]] && ![str isEqualToString:@"(null)"])?str:@" ")
+//整数转换成字符串
+#define kStrWithInter(i) [NSString stringWithFormat:@"%d",i]
+//float转换成字符串
+#define kStrWithFloat(f) [NSString stringWithFormat:@"%0.1f",f]
+#define KErrorTag 9999
+#define KArticleNoDataTag 8888
+#define kBlackTag 100001
+#define KArticleCollectTag 7777
+#define KArticleSearchTag 6666
+
+#define KAddInforMation  @"addInfo"
+#define BackToChatVc     @"BackToChatVc"
+//订阅改变
+#define SubscribeChanged     @"SubscribeChanged"
+//定制服务改变
+#define ServiceChanged       @"ServiceChanged"
+
+//首页 下拉加载
+#define HomePageHeaderRefresh       @"HomePageHeaderRefresh"
+
+#define TabbarHomeEndRefresh         @"TabbarHomeEndRefresh"
+
+#define HomePageRefresh @"HomePageRefresh"
+
+//首页咨询拖动
+#define HomePageConsultCollectionChanged      @"HomePageConsultCollectionChanged"
+
+#define HomePageHeaderViewChanged      @"HomePageHeaderViewChanged"
+
+#define ConsultScrollEnable     @"ConsultScrollEnable"
+
+//新朋友数量改变
+#define NewFriendChanged     @"NewFriendChanged"
+//已经读过的 资讯id  存在userdefaults
+#define HaveReadConsultId    @"HaveReadConsultId"
+
+//刷新首页
+#define ReloadHomePageView    @"ReloadHomePageView"
+
+//刷新医圈消息KEY
+#define KRefshMessage   @"RefshMessage"
+
+//生日分享到医圈
+#define KBirthDayShareYiQuan @"KBirthDayShareYiQuan"
+
+//记录是否领取生日积分
+#define kIsGetBirthDayScore @"getBirthDayScore"
+
+//记录是否生成卡片
+#define kIsGetBirthDayWishes @"isGetBirthDayWishes"
+//本地保存用户最新的媒体号 资讯 id
+#define MediaNewConsultId [NSString stringWithFormat:@"%@%@",@"MediaNewConsultId",kUserId]
+//刷新首页轮播图
+#define ReloadBannerView @"ReloadBannerView"
+//返回搜索的词
+#define kTopicReturn     @"kTopicReturn"
+
+//newloginVc 登陆成功之后，发的通知 重新获取数据
+#define kNewLoginNotice  @"kNewLoginNotice"
+
+//刷新问题广场
+#define kfreshNetWorkQuestion @"kfreshNetWorkQuestion"
+
+//行间距
+#define kLineSpacing 0
+
+#define kSuccessCode @"10000"
+
+//服务cache
+#define kHomePageServeCache   [NSString stringWithFormat:@"%@%@",@"kHomePageServeCache",kUserId]
+//订阅cache
+#define kHomePageSubScribeCache   [NSString stringWithFormat:@"%@%@",@"kHomePageSubScribeCache",[DoctorInfo doctorInfo].pid]
+//媒体号订阅cache
+#define kHomePageMediaSubScribeCache [NSString stringWithFormat:@"%@%@",@"kHomePageMediaSubScribeCache",[DoctorInfo doctorInfo].pid]
+//首页banner Cache
+#define kHomePageBannerCache    [NSString stringWithFormat:@"%@%@",@"kHomePageBannerCache",[DoctorInfo doctorInfo].pid]
+
+
+//好友列表
+#define kFriendList [NSString stringWithFormat:@"%@%@",@"kFriendList",[DoctorInfo doctorInfo].pid]
+//群列表
+#define kGroupList [NSString stringWithFormat:@"%@%@",@"kGroupList",[DoctorInfo doctorInfo].pid]
+
+/**
+ *  刷新视频页数据
+ */
+#define kRefreshPlayerViewController @"kRefreshPlayerViewController"
+
+#define kPlayerViewControllerRefreshComment @"kPlayerViewControllerRefreshComment"
+
+//是否显示messageview的蒙版
+#define kShowCoverView @"kShowCoverView"
+
+//通知我的订阅页面刷新数据
+#define kReloadData @"kReloadData"
+
+//收到透传消息  刷新  消息页面 和  聊天页面
+#define kReloadCmdMessage @"kReloadCmdMessage"
+
+#define kUserId @"84702973"
+

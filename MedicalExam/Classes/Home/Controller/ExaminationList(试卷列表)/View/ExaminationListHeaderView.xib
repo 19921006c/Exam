@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ExaminationListHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNF-nc-OfV" userLabel="headerViewBtn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="headerViewBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="1H9-D8-Fpm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soD-1m-uQG">
+                    <rect key="frame" x="14" y="6" width="35.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MedicineExamination_02" translatesAutoresizingMaskIntoConstraints="NO" id="Kht-lr-KWy">
+                    <rect key="frame" x="351" y="11" width="12" height="7"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="7" id="IDh-u6-H6m"/>
+                        <constraint firstAttribute="width" constant="12" id="ZKf-an-ISj"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Kht-lr-KWy" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0Ia-BC-sgK"/>
+                <constraint firstAttribute="bottom" secondItem="LNF-nc-OfV" secondAttribute="bottom" id="D9U-Sr-cwb"/>
+                <constraint firstItem="LNF-nc-OfV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rq9-Eu-3R2"/>
+                <constraint firstItem="soD-1m-uQG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UGD-Nm-F68"/>
+                <constraint firstItem="soD-1m-uQG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="co5-Ac-YaV"/>
+                <constraint firstAttribute="trailing" secondItem="LNF-nc-OfV" secondAttribute="trailing" id="hi2-Ew-pVt"/>
+                <constraint firstAttribute="trailing" secondItem="Kht-lr-KWy" secondAttribute="trailing" constant="12" id="tbl-ku-i7H"/>
+                <constraint firstItem="LNF-nc-OfV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xuw-Dg-uxs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImage" destination="Kht-lr-KWy" id="6RE-2S-PtA"/>
+                <outlet property="label" destination="soD-1m-uQG" id="oss-N3-tqe"/>
+            </connections>
+            <point key="canvasLocation" x="294.5" y="221"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MedicineExamination_02" width="12" height="7"/>
+    </resources>
+</document>
