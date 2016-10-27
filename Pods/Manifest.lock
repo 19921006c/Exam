@@ -31,6 +31,7 @@ PODS:
     - DTFoundation/Core
   - DTFoundation/UIKit (1.7.10):
     - DTFoundation/Core
+  - MJRefresh (3.1.12)
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
@@ -41,6 +42,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.5.2)
   - DTCoreText (~> 1.6.17)
+  - MJRefresh (~> 3.1.12)
   - SDWebImage (~> 3.7.2)
   - YYKit (~> 1.0.6)
 
@@ -48,9 +50,10 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   DTCoreText: 3ea8bba23dd2141ba18adb227a7dd33a822df1c4
   DTFoundation: 3b6b1b817d2a7fb02e7eaf2596c922a68145bd43
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   YYKit: 843d1b26e20b82c695790c9a89907eaa1e99907f
 
-PODFILE CHECKSUM: 248be9e1723f670e454710f3a6d9c263db7be623
+PODFILE CHECKSUM: a22e4e0f1cf8c46ff5109038e967e71be4eb8951
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

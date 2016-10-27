@@ -13,6 +13,7 @@
 #import "YimaiMedicalExaminationDataModel.h"
 #import "YimaiMedicalExaminationResultModel.h"
 #import "UIImageView+EMWebCache.h"
+#import "MJRefresh.h"
 @interface MedicineExaminationController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -49,10 +50,13 @@ static NSString *const identifier = @"MedicineExaminationCell";
     
     self.title = @"医学试题";
     
-    //请求数据
-    [self requestHttpData];
-    
     //设置collection view
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        //请求数据
+        [self requestHttpData];
+    }];
+    
+    [self.collectionView.mj_header beginRefreshing];
     [self loadCollectionView];
     //设置页面属性
     [self setAttributes];
@@ -76,6 +80,7 @@ static NSString *const identifier = @"MedicineExaminationCell";
     
     [ExamTool MedicalExaminationWithSuccess:^(YimaiMedicalExaminationResultModel *resutlModel) {
         
+        [self.collectionView.mj_header endRefreshing];
         [self removeLoading];
         
         self.resultModel = resutlModel;
@@ -85,6 +90,8 @@ static NSString *const identifier = @"MedicineExaminationCell";
         [self.collectionView reloadData];
         
     } failure:^(NSError *error) {
+        
+        [self.collectionView.mj_header endRefreshing];
         
         [self removeLoading];
     }];
